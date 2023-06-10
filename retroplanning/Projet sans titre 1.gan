@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Création d'une application de gestion des étudiants " company=" UFR SDS" webLink="http://  " view-date="2023-05-12" view-index="0" gantt-divider-location="351" resource-divider-location="300" version="3.2.3247" locale="fr_FR">
+    <description>
+        <![CDATA[L'UFR SDS de l'université Joseph-Ki souhaite faire une refonte de son application de gestion des étudiants.
+Pour cela elle vous recrute pour le developpement de la solution. L'application doit permettre d'enregistrer et lister les étudiants. Le Directeur souhaite avoir les informations suivantes sur les étudiants, le nom, prénom, date de naissance, genre, date d'entrée à l'UFR SDS et le contact de la personne à prevenir en cas de besoin.]]>
+    </description>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="200" order="0"/>
+        <field id="tpd4" name="Date de début" width="75" order="1"/>
+        <field id="tpd5" name="Date de fin" width="75" order="2"/>
+        <option id="filter.completedTasks" value="false"/>
+        <timeline>
+            <![CDATA[0]]>
+        </timeline>
+        <option id="color.recent">
+            <![CDATA[#66ffff #006666 #ffff00 #330033 #33ff00 #3333ff #ff3300]]>
+        </option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="210" order="0"/>
+        <field id="1" name="Rôle par défaut" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Réalisation des maquettes" color="#8cb6ce" shape="0,1,0,1,0,0,1,0,0,1,0,1,1,0,0,0" meeting="false" start="2023-05-09" duration="1" complete="100" thirdDate="2023-05-09" thirdDate-constraint="0" expand="true"/>
+        <task id="1" name="Cahiers de charges" color="#ff3300" meeting="false" start="2023-05-08" duration="2" complete="0" thirdDate="2023-05-08" thirdDate-constraint="0" expand="true"/>
+        <task id="2" name="Backlog" color="#ffff00" meeting="false" start="2023-05-09" duration="1" complete="0" thirdDate="2023-05-10" thirdDate-constraint="0" expand="true"/>
+        <task id="3" name="Diagramme de classe" color="#3333ff" meeting="false" start="2023-05-10" duration="3" complete="0" thirdDate="2023-05-10" thirdDate-constraint="0" expand="true"/>
+        <task id="4" name="Réalistion de la page accueil" color="#33ff00" meeting="false" start="2023-05-12" duration="2" complete="0" thirdDate="2023-05-11" thirdDate-constraint="0" expand="true"/>
+        <task id="5" name="Réalisation de la gestion  des onglets  connexion et Mot passe oublié" color="#330033" meeting="false" start="2023-05-15" duration="3" complete="0" thirdDate="2023-05-15" thirdDate-constraint="1" expand="true"/>
+        <task id="6" name="Réalisation  de la page d'inscription" color="#ffff00" meeting="false" start="2023-05-17" duration="3" complete="0" thirdDate="2023-05-17" thirdDate-constraint="1" expand="true"/>
+        <task id="7" name="Réalistion de la page consultation" color="#006666" meeting="false" start="2023-05-19" duration="2" complete="0" thirdDate="2023-05-19" thirdDate-constraint="1" expand="true"/>
+        <task id="8" name="Finalisation du projet" color="#66ffff" meeting="false" start="2023-05-22" duration="4" complete="0" thirdDate="2023-05-22" thirdDate-constraint="1" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>

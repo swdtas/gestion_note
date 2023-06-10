@@ -1,0 +1,13 @@
+<div class=" container col-lg-6  col-md-6 col-md-offset-6  col-lg-offset-6">
+     
+      <form class="form_connexion"  action="" method="POST">
+            <br>
+            <input type="username" id="username" name="username" required><br><br>
+            <label for="password">Mot de passe:</label> <br><br>
+            <input type="password" id="password" name="password" required><br><br>
+            <input class="justify-center" id="connect" type="submit" name="connecter" value="Se connecter">
+          </form>
+      </div>  
+
+
+      
