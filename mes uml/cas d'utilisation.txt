@@ -1,0 +1,66 @@
+cas 'utilisation pour les parents d'élèves:
+
+1. Acteurs :
+   - Parents d'élèves : Les parents d'élèves qui utilisent l'application pour consulter les moyennes de leurs propres enfants.
+
+2. Cas d'utilisation :
+   - Se connecter à l'application : Les parents d'élèves doivent pouvoir se connecter à l'application en utilisant leurs identifiants.
+   - Consulter les moyennes de leurs enfants : Les parents d'élèves peuvent accéder à l'interface qui affiche les moyennes de leurs propres enfants pour chaque trimestre.
+
+3. Description :
+   - Une fois connectés, les parents d'élèves peuvent accéder à une interface qui leur permet de consulter les moyennes de leurs propres enfants pour chaque trimestre.
+   - Les informations affichées seront spécifiques à leurs propres enfants et ne seront pas visibles pour les autres parents d'élèves.
+   - Les parents d'élèves ne pourront pas consulter les moyennes des enfants d'autres parents, mais seulement celles de leurs propres enfants.
+
+Cette mise à jour garantit que chaque parent d'élève ne peut consulter que les moyennes de ses propres enfants, assurant ainsi la confidentialité des informations et le respect de la vie privée.
+
+
+cas d'utlisation pour le directeurs:
+
+1. Acteur :
+   - Directeur : Le directeur du lycée Saint Jean qui utilise l'application pour gérer les administrateurs, les utilisateurs et les classes.
+
+2. Cas d'utilisation :
+   - Se connecter à l'application d'administration : Le directeur doit pouvoir se connecter à l'application d'administration en utilisant ses identifiants.
+   - Gérer les administrateurs : Le directeur peut ajouter, supprimer ou modifier les comptes des administrateurs de l'application.
+   - Gérer les utilisateurs : Le directeur peut ajouter, supprimer ou modifier les comptes des parents d'élèves.
+   - Gérer les classes : Le directeur peut ajouter, supprimer ou modifier les informations sur les classes (6ème, 5ème, 4ème, 3ème).
+   - Consulter les moyennes des élèves : Le directeur peut consulter les moyennes des élèves pour chaque trimestre, mais pas les modifier.
+
+3. Description :
+   - Le directeur peut se connecter à l'application en utilisant ses identifiants spécifiques pour accéder à l'interface d'administration.
+   - Il peut gérer les administrateurs en ajoutant de nouveaux administrateurs, en supprimant les comptes existants ou en modifiant les informations des administrateurs.
+   - Le directeur peut également gérer les comptes des parents d'élèves, en ajoutant de nouveaux utilisateurs, en supprimant les comptes existants ou en mettant à jour les informations des parents.
+   - Pour les classes, le directeur peut ajouter de nouvelles classes, supprimer des classes existantes ou modifier les informations relatives aux classes.
+   - En tant que directeur, il a la possibilité de consulter les moyennes des élèves pour chaque trimestre, afin d'avoir une vue d'ensemble des performances scolaires de l'établissement, mais il n'est pas autorisé à les modifier.
+
+Ce cas d'utilisation permet au directeur de l'application d'effectuer les tâches d'administration et de gestion nécessaires, en lui donnant le contrôle sur les administrateurs, les utilisateurs (parents d'élèves) et les classes.
+
+
+
+cas d'utlisation pour les secretaires:
+Compris, nous allons ajuster la gestion des archives pour les données des élèves à la fin de l'année scolaire. Voici la mise à jour du cas d'utilisation :
+
+1. Acteur :
+   - Secrétaires : Les secrétaires du lycée Saint Jean qui utilisent l'application pour effectuer diverses tâches administratives liées aux élèves et aux parents d'élèves.
+
+2. Cas d'utilisation :
+   - Se connecter à l'application d'administration : Les secrétaires doivent pouvoir se connecter à l'application d'administration en utilisant leurs identifiants.
+   - Inscrire un nouvel élève : Les secrétaires peuvent enregistrer les informations d'un nouvel élève dans le système, y compris son nom, sa classe et d'autres détails pertinents.
+   - Ajouter les moyennes d'un élève : Les secrétaires peuvent ajouter les moyennes d'un élève dans le système pour chaque trimestre.
+   - Supprimer un élève : Les secrétaires peuvent supprimer les informations d'un élève du système lorsqu'il quitte l'établissement.
+   - Modifier les informations d'un élève : Les secrétaires peuvent mettre à jour les informations d'un élève dans le système, comme son nom, sa classe, etc.
+   - Créer un compte pour un parent d'élève : Les secrétaires peuvent créer un compte pour un parent d'élève dans l'application, en associant le compte du parent à l'élève correspondant.
+   - Archiver les données des élèves à la fin de l'année scolaire : Les secrétaires peuvent déplacer les informations des élèves de l'année scolaire terminée vers une section d'archives pour la conservation des données.
+
+3. Description :
+   - Les secrétaires se connectent à l'application d'administration en utilisant leurs identifiants uniques pour accéder à l'interface dédiée aux tâches administratives.
+   - Elles sont responsables de l'inscription des nouveaux élèves en saisissant leurs informations dans le système, ce qui permet de créer leur profil et de les associer à leur classe respective.
+   - Les secrétaires peuvent ajouter les moyennes des élèves dans le système pour chaque trimestre, en entrant les valeurs appropriées pour chaque matière.
+   - Si un élève quitte l'établissement, les secrétaires ont la possibilité de supprimer ses informations du système.
+   - Elles peuvent également modifier les informations des élèves existants, comme leur nom, leur classe, etc., au besoin.
+   - Les secrétaires sont chargées de créer les comptes des parents d'élèves dans l'application, en associant chaque compte parent à l'élève correspondant, afin que les parents puissent consulter les moyennes de leurs enfants.
+   - À la fin de l'année scolaire, les secrétaires peuvent déplacer les informations des élèves de l'année scolaire terminée vers une section d'archives, où les données seront conservées pour référence future.
+
+Avec cette mise à jour, les secrétaires auront la possibilité d'archiver les données des élèves à la fin de chaque année scolaire, garantissant ainsi la conservation des données pour référence ultérieure et permettant une meilleure gestion des informations dans l'application.
+

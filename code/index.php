@@ -6,6 +6,8 @@ else {
     $erreurLogin = "";
 }
 session_destroy();
+include('pages/login.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -18,59 +20,49 @@ session_destroy();
     <title>accueil</title>
 </head>
 <body>
-    <div class="loader">
-
-    </div>
     <header>
-      <nav class="navbar navbar-light ">
-            <div class="container-fluid ">
-              <div >
-              <a class="navbar-brand" href="#">
-                <img src="images/logo1.png" alt="logo"  class="w-100 h-100 img-fluid">
-              </a>
-            </div>
-             <div>
-                <p class=""><strong>"Une nouvelle ère pour gérer les notes des élèves : Bienvenue dans 
-                    notre plateforme, où l'efficacité et la simplicité se rencontrent !"</strong></p>
-            </div>   
-            </div>
-          </nav>  
+    <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid ">
+      <div >
+      <a class="navbar-brand" href="#">
+        <img src="images/logo1.png" alt="" width="100" height="100" class="d-inline-block align-text-top">
+      </a>
+    </div>
+  </nav> 
     </header>
     <main>
-    <section class="section_index">
+    <section class="section_index p-1">
       <div class="container-fluid row">
       <div class="col-lg-6">
-       <img src="images/undraw_Educator_re_ju47.png" alt=""  class="img-fluid">
+       <img src="images/image2.png" alt=""  class="img-fluid">
       </div>
       <div class="container col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
     <div class="panel panel-primary">
         <div class="panel-heading">
         <h1 class="ml-5"> Veuillez vous connecter à votre compte</h1>
         </div>
-        <div class="panel-body bg-primary p-5">
-            <form method="post" action="seConnecter.php" >
-
-                <?php if (!empty($erreurLogin)) { ?>
+        <div class="panel-body color2 p-5">
+            <form method="post" action="pages/seconnecter.php" >
+            <?php if (!empty($erreurLogin)) { ?>
                     <div class="alert alert-danger">
                         <?php echo $erreurLogin ?>
                     </div>
                 <?php } ?>
-
                 <div class="form-group">
                 <label for="username">Nom  ou email:</label> <br> 
                     <input type="text" name="username" placeholder="email"
-                           class="form-control" autocomplete="off"/>
+                           class="form-control" autocomplete="off" required/>
                 </div> <br>
 
                 <div class="form-group">
                     <label for="pwd">Mot de passe :</label>
                     <input type="password" name="pwd"
-                           placeholder="Mot de passe" class="form-control"/>
+                           placeholder="Mot de passe" class="form-control" required/>
                 </div> <br>
-                <p class="text-right">
+                <p class="text-right text-white">
                     <a href="InitialiserPwd.php">Mot de passe Oublié</a>
                 </p>
-                <button type="submit" class="btn btn-success">
+                <button type="submit" name="connecter" class="btn btn-success">
                     <span></span>
                     Se connecter
                 </button>
