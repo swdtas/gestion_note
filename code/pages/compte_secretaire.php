@@ -15,7 +15,7 @@ include('connexion.php');
     $query_run->bindParam(':mot_pass_saisi',$mot_pass_saisi);   
     $query_run->bindParam(':fonction', $fonction);     
         if ($query_run->execute()) {
-            header('Location:inscription.php');     
+            header('Location:compte_secretaire.php');     
             echo'<h6 class=" incorrect text-danger"> Vos données ont été bien enregistrées!</h6>';
         } else {
             $msg = "Erreur d'enregistrement";
@@ -37,7 +37,8 @@ include('connexion.php');
     <div class="container-fluid ">
       <div >
       <a class="navbar-brand" href="#">
-        <img src="../images/logo1.png" alt="" width="100"style=" border-radius: 10px;" height="100" class="d-inline-block align-text-top">
+      <img src="../images/logo2.png" alt="" width="100"height="70" class="d-inline-block align-text-top">
+    </a>
       </a>
     </div>
     <div >

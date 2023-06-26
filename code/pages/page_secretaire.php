@@ -13,7 +13,7 @@
     <div class="container-fluid ">
       <div >
       <a class="navbar-brand" href="#">
-        <img src="../images/logo1.png" alt="" width="100"style=" border-radius: 10px;" height="100" class="d-inline-block align-text-top">
+      <img src="../images/logo2.png" alt="" width="100"height="70" class="d-inline-block align-text-top">
       </a>
     </div>
     <div >

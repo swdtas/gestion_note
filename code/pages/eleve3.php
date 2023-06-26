@@ -21,7 +21,7 @@
             <div class="sidebar-heading text-center py-4  fs-4 fw-bold text-uppercase border-bottom">
                     <img src="../images/logo2.png" alt="" width="100"height="70" class="d-inline-block align-text-top"></div>
                     <div class="list-group list-group-flush my-3">
-                    <a href="#" class="list-group-item list-group-item-action   primary-text active">
+                    <a href="\appli_gestions_eleves\code\pages\donne_eleve.php" class="list-group-item list-group-item-action   primary-text active">
                         <button class="btn   btn-success  border-primary  fs-5 text fw-bold" type="submit">Classe 6e</button> 
                     </a><br>
                     <a href="\appli_gestions_eleves\code\pages\eleve5.php" class="list-group-item list-group-item-action bg-transparent primary-text ">
@@ -30,7 +30,7 @@
                     <a href="\appli_gestions_eleves\code\pages\eleve4.php" class="list-group-item list-group-item-action bg-transparent primary-text ">
                         <button class="btn  btn-success  border-primary fs-5 text fw-bold" type="submit">Classe 4e</button> 
                     </a><br>
-                    <a href="\appli_gestions_eleves\code\pages\eleve3.php" class="list-group-item list-group-item-action bg-transparent primary-text">
+                    <a href="#" class="list-group-item list-group-item-action bg-transparent primary-text">
                         <button class="btn  btn-success  border-dark   fs-5 text fw-bold" type="submit">Classe 3e</button> 
                     </a><br>
             </div>
@@ -39,13 +39,13 @@
 
         <!-- onglets -->
         <div id="page-content-wrapper">
-            <nav class="navbar d-flex navbar-expand-lg navbar-light color1 py-4 px-4">
+            <nav class="navbar navbar-expand-lg navbar-light color1 py-4 px-4">
                 <div class="d-flex  align-items-center ">
                     <i class="fas fa-align-left light-text fs-4 me-3 text-white" id="menu-toggle"></i>
-                     <h2 class="fs-2 m-0 text-white">Gestionnaire de notes de la classe de 6e</h2>
+                     <h2 class="fs-2 m-0 text-white">Gestionnaire de notes de la classe de 3e</h2>
                 </div>
-                <div  class="part">
-                <a href="\appli_gestions_eleves\code\pages\deconnexion.php"><button type="button" name class="btn btn-success part">Déconnexion</button></a>
+                <div class="part">
+                <a href="\appli_gestions_eleves\code\pages\deconnexion.php"><button type="button" name class="btn part btn-success">Déconnexion</button></a>
                 </div>
             </nav>
              <!-- fin onglets -->
@@ -62,16 +62,15 @@
                                 <th>Date de naissance</th>
                                 <th>Lieu de naissance</th>
                                 <th>Genre</th>
-                                <th>Nom du tuteur</th>
-                                <th>Telephone</th>
-                                <th>Notes</th>                            
+                                
+                                
                             </tr>
                         </thead>
                         <?php
                          
                                 require'connexion.php'; 
                                 // Récupération des données de l'eleve
-                                $requete = "SELECT id_eleve,nom,prenom,date_naissance,lieu_naissance,genre,nom_tuteur,telephone,moyenne FROM eleve where classe='6ex'";
+                                $requete = "SELECT id_eleve,nom,prenom,date_naissance,lieu_naissance,genre FROM eleve where classe='6ex'";
                                 $data=$connect->query($requete);
                                 if($data->rowcount()>0){
                                     while($row=$data->fetch(PDO::FETCH_ASSOC)){
@@ -81,9 +80,6 @@
                                        <td>" . $row['date_naissance'] . "</td>
                                         <td>" . $row['lieu_naissance'] . "</td>
                                         <td>" . $row['genre'] . "</td>
-                                        <td>" . $row['nom_tuteur'] . "</td>
-                                        <td>" . $row['telephone'] . "</td>
-                                        <td>" . $row['moyenne'] . "</td>
                                         </tr>";
                                         
                                     }

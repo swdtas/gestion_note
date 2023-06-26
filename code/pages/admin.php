@@ -44,3 +44,52 @@
         }
     }
 ?>
+
+
+
+
+
+
+
+tfyguhijohjkolyhuijkol
+<div class="row">
+            <div class="col-12">
+                <div class=" data_table  pt-5">
+                    <table id="example" class="  table table-striped table-bordered pt-5">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Nom</th>
+                                <th>Prénom</th>
+                                <th>Date de naissance</th>
+                                <th>Lieu de naissance</th>
+                                <th>Genre</th>
+                                <th>Tuteur</th>
+                               
+                            </tr>
+                          </thead>
+                          <?php
+                         
+                                // Vérification de la connexion
+                                require'connexion.php'; 
+                                // Récupération des données des étudiants
+                                $requete = "SELECT id_eleve,nom,prenom,date_naissance,lieu_naissance,genre FROM eleve where classe='6ex'";
+                                $data=$connect->query($requete);
+                                if($data->rowcount()>0){
+                                    while($row=$data->fetch(PDO::FETCH_ASSOC)){
+                                      
+                                           <td> <button> <a href='detail.php?id=" . $row['id_eleve'] . "'onclick='return confirm(\"Voulez-vous afficher les identités de cet apprenant?\")'>Detail</a></td> </button>
+                                            <td> <button> <a href='modify.php?id=" . $row['id_eleve'] . "'>modifier</a> <button> </td>
+                                            <td> <button> <a href='supp.php?id=" . $row['id_eleve'] . "' onclick='return confirm(\"Voulez-vous vraiment supprimer cet apprenant?\")'>Supprimer</a></td></button>
+                                        </tr>";
+                                        
+                                    }
+                                }else{
+                                    echo"aucune donnée dans la base";
+                                }   
+
+                               
+                        
+                    </table>
+                </div>
+         
+            </div>

@@ -5,7 +5,6 @@ if (isset($_SESSION['erreurLogin']))
 else {
     $erreurLogin = "";
 }
-session_destroy();
 include('pages/login.php');
 
 ?>
@@ -25,7 +24,8 @@ include('pages/login.php');
     <div class="container-fluid ">
       <div >
       <a class="navbar-brand" href="#">
-        <img src="images/logo1.png" alt="" width="100" height="100" class="d-inline-block align-text-top">
+      <img src="images/logo2.png" alt="" width="100"height="70" class="d-inline-block align-text-top">
+    </a>
       </a>
     </div>
   </nav> 
@@ -59,9 +59,6 @@ include('pages/login.php');
                     <input type="password" name="pwd"
                            placeholder="Mot de passe" class="form-control" required/>
                 </div> <br>
-                <p class="text-right text-white">
-                    <a href="InitialiserPwd.php">Mot de passe Oublié</a>
-                </p>
                 <button type="submit" name="connecter" class="btn btn-success">
                     <span></span>
                     Se connecter

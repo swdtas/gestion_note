@@ -5,6 +5,7 @@ include('connexion.php');
     $nom=$_POST['nom'];
     $prenom= $_POST['prenom'];
     $email= $_POST['email'];
+    
     $mot_pass_saisi= $_POST['pwd'];
     $fonction='admin';
     $query = "INSERT INTO administrateur (nom, prenom,email,mot_pass,fonction)VALUES (:nom,:prenom,:email,:mot_pass_saisi,:fonction)";
@@ -38,7 +39,8 @@ include('connexion.php');
     <div class="container-fluid ">
       <div >
       <a class="navbar-brand" href="#">
-        <img src="../images/logo1.png" alt="" width="100"style=" border-radius: 10px;" height="100" class="d-inline-block align-text-top">
+      <img src="../images/logo2.png" alt="" width="100"height="70" class="d-inline-block align-text-top">
+    </a>
       </a>
     </div>
   </nav>

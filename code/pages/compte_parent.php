@@ -1,22 +1,39 @@
 <?php
  session_start();
 include('connexion.php');
+function generateRandomPassword($length = 6) {
+  // Caractères possibles dans le mot de passe
+  $characters = 'A0123456789';
+
+  $password = '';
+  $charLength = strlen($characters) - 1;
+
+  // Générer un caractère aléatoire à chaque itération jusqu'à atteindre la longueur souhaitée
+  for ($i = 0; $i < $length; $i++) {
+      $randomIndex = mt_rand(0, $charLength);
+      $password .= $characters[$randomIndex];
+  }
+
+  return $password;
+}
+
+// Exemple d'utilisation pour générer un mot de passe de 10 caractères
+$password = generateRandomPassword(4);
   if(isset($_POST['submit'])){
     $nom=$_POST['nom'];
     $prenom= $_POST['prenom'];
     $email= $_POST['email'];
-    $mot_pass_saisi= $_POST['pwd'];
-    $fonction='admin';
-    $query = "INSERT INTO administrateur (nom, prenom,email,mot_pass,fonction)VALUES (:nom,:prenom,:email,:mot_pass_saisi,:fonction)";
+    $telephone=$_POST['telephone'];
+    $mot_pass=$password;  
+    $query = "INSERT INTO parent (nom,prenom,email,telephone,mot_pass)VALUES (:nom,:prenom,:email,:telephone,:mot_pass)";
     $query_run = $connect->prepare($query);
     $query_run->bindParam(':nom', $nom); 
     $query_run->bindParam(':prenom', $prenom); 
-    $query_run->bindParam(':email', $email);  
-    $query_run->bindParam(':mot_pass_saisi',$mot_pass_saisi);   
-    $query_run->bindParam(':fonction', $fonction);     
-        if ($query_run->execute()) {
-            header('Location:../index.php');     
-            echo'<h6 class=" incorrect text-danger"> Vos données ont été bien enregistrées!</h6>';
+    $query_run->bindParam(':email', $email);     
+    $query_run->bindParam(':telephone', $telephone); 
+    $query_run->bindParam(':mot_pass',$mot_pass);    
+        if ($query_run->execute()) {   
+          $msg = "Vos données ont été bien enregistrées!" ; 
         } else {
             $msg = "Erreur d'enregistrement";
         }
@@ -38,7 +55,8 @@ include('connexion.php');
     <div class="container-fluid ">
       <div >
       <a class="navbar-brand" href="#">
-        <img src="../images/logo1.png" alt="" width="100"style=" border-radius: 10px;" height="100" class="d-inline-block align-text-top">
+      <img src="../images/logo2.png" alt="" width="100"height="70" class="d-inline-block align-text-top">
+    </a>
       </a>
     </div>
     <div >
@@ -83,11 +101,10 @@ include('connexion.php');
                     <input type="email" name="email" placeholder="email"
                            class="form-control" autocomplete="off"  required/>
                 </div> <br>
-
                 <div class="form-group">
-                    <label for="pwd">Mot de passe :</label><br>
-                    <input type="password" name="pwd"
-                           placeholder="Mot de passe" class="form-control"  required/>
+                <label for="telephone">Téléphone</label> <br> 
+                    <input type="" name="telephone" placeholder="numéro de téléphone"
+                           class="form-control" autocomplete="off"  required/>
                 </div> <br>
                 <button type="submit" name="submit" class="btn btn-success">
                     <span></span>

@@ -27,3 +27,126 @@ input[type="submit"]:hover {
   border-radius: 10px;
   border: 4px;
 }
+.corps{
+  height:600px;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  
+}
+.no{
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+/* data table */
+:root {
+  --main-bg-color: #425ca1;
+  --main-text-color: #617499;
+  --second-text-color: #bbbec5;
+  --second-bg-color: #deeee8;
+}
+
+.primary-text {
+  color: var(--main-text-color);
+}
+
+.second-text {
+  color: var(--second-text-color);
+}
+
+.primary-bg {
+  background-color: var(--main-bg-color);
+}
+
+.secondary-bg {
+  background-color: var(--second-bg-color);
+}
+
+.rounded-full {
+  border-radius: 100%;
+}
+
+#wrapper {
+  overflow-x: hidden;
+  background: rgb(235,238,240);
+  background: linear-gradient(128deg, rgba(235,238,240,0.9164040616246498) 0%, rgba(201,215,218,0.9220063025210083) 35%, rgba(0,212,255,1) 100%);
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+#menu-toggle {
+  cursor: pointer;
+}
+
+.list-group-item {
+  border: none;
+  padding: 20px 30px;
+}
+
+.list-group-item.active {
+  background-color: transparent;
+  color: var(--main-text-color);
+  font-weight: bold;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+.part{
+  margin-left: 4cm;
+}
+table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 2px solid #3e1cea;
+}
+tr:nth-child(even) {
+  background-color: #e6eee7;
+}
+#tr1:hover {
+  background-color: #e0e0e0;
+}
